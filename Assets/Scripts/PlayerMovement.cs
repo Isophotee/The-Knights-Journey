@@ -20,32 +20,35 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            PlayJump();
+            animator.SetTrigger("Jump");
         }
     }
 
     private void PlayerWalk()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontalInput * speed * Time.deltaTime, 0f, 0f)); 
+        transform.Translate(new Vector3(horizontalInput * speed * Time.deltaTime, 0f, 0f));
         ScaleFlip(horizontalInput);
+        
         if (horizontalInput != 0)
         {
-            PlayWalk();
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 
     private void ScaleFlip(float horizontalInput)
     {
-        if (horizontalInput < 0) 
+        if (horizontalInput < 0)
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
-            Debug.Log("flip!");
-        }  
+        }
         else if (horizontalInput > 0)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-            Debug.Log("noFlip");
         }
     }
 
@@ -54,16 +57,4 @@ public class PlayerMovement : MonoBehaviour
         PlayerWalk();
         PlayerJump();
     }
-
-    #region AnimationHandler
-    private void PlayWalk()
-    {
-        animator.SetTrigger("goWalk");
-    }
-    
-    private void PlayJump()
-    {
-        animator.SetTrigger("goJump");
-    }
-    #endregion
 }

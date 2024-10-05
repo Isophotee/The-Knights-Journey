@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-		//fungsi mengganti scene melalui suatu dengan memakai parameter suatu nama scene
+		//Ganti Scene pakai nama sebagai parameter
     public void ChangeScene (string sceneName) 
     {
         SceneManager.LoadScene(sceneName);
     }
-		//fungsi untuk keluar dari aplikasi
-    public void QuitApp()
+        public void QuitApp()
     {
         Application.Quit();
     }

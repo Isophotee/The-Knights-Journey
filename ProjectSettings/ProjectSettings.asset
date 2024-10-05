@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 22
-  productGUID: 6742965d7c9b92c48b92ad4c62f9b46f
+  productGUID: 4173f79ef1e4daf4ca50c4853282bee2
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2D-Side-Scroll
+  productName: SideScroll2D
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -638,10 +638,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 27c18855-6894-4c80-9a80-e73156713fa1
+  cloudProjectId: 7435e13f-ca0d-4e7a-8b6a-b65159098332
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 2D-Side-Scroll
+  projectName: SideScroll2D
   organizationId: ahnjear2
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

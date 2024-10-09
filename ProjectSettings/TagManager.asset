@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 1251332973
+    locked: 0
+  - name: Background1
+    uniqueID: 7594871
+    locked: 0
+  - name: Background3
+    uniqueID: 732003587
     locked: 0
   - name: Default
     uniqueID: 0
